@@ -13,6 +13,11 @@ border: 1px solid rgb(0, 81, 255);
 min-height: 100px;
   /* fine debug */
 }
+/* flex */
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+}
 /* regole di debug */
   header{
     background-color: red;
@@ -25,21 +30,25 @@ main section{
   min-height: 100px;
   background-color: lightgray;
 }
+/* fine debug */
 
+/* carosel a - b e c */
 .carosel{
   height: 500px;
   text-align: center;
   border: 3px solid;
 }
+
+/* barra a e b*/
 .barra{
   background-color: purple;
+}
+.barra .container{
+  justify-content: space-between;
+  align-items: center;
   min-height: 50px;
 }
-.row{
-  display: flex;
-  width: 100%;
-}
-.row .col.four{
+.circle .box{
   width: 25%;
   /* regole di debug */
   background-color: lightgreen;
@@ -47,22 +56,65 @@ main section{
   min-height: 100px;
   /* fine debug */
 }
-.row .col.three{
-  width: calc(100% / 3);
-  /* regole di debug */
-  background-color: lightgreen;
-  border: 1px solid white;
-  min-height: 100px;
-  /* fine debug */
-}
-.row .col.two{
+/* info a e b */
+.info-a .box,
+.info-b .box {
   width: 50%;
   /* regole di debug */
   background-color: lightgreen;
   border: 1px solid white;
-  min-height: 100px;
+  min-height: 200px;
   /* fine debug */
 }
+.our-class .text-right,
+.our-class .text-left,
+.staff .text-right,
+.staff .text-left{
+  width: 50%;
+  /* regole di debug */
+  border: 1px solid;
+  /* fine debug */
+}
+.our-class .images .box,
+.staff .images .box{
+  width: 50%;
+  /* regole di debug */
+  border: 1px solid;
+  /* fine debug */
+}
+
+/* sectiom child images */
+.child-images{
+  width: 100%;
+}
+.child-images .img{
+  width: 25%;
+}
+
+.news .images .box{
+  width: calc(100% / 3);
+}
+
+/* contact us */
+.contact .box{
+  width: 25%;
+}
+.form-left,
+.form-right{
+  width: 50%; height: 200px;
+}
+input,
+textarea{
+  width: 100%; height: 100%;
+}
+.form-left{
+  flex-direction: column;
+  justify-content: space-between;
+}
+.form-left input{
+  height: 50px;
+}
+
 
 /* regole di debug */
 footer{
