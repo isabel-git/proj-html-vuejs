@@ -9,7 +9,7 @@
   width: 1000px;
   margin: 0 auto;
   /* regole di debug */
-border: 1px solid white;
+border: 1px solid rgb(0, 81, 255);
 min-height: 100px;
   /* fine debug */
 }
@@ -21,11 +21,48 @@ min-height: 100px;
 /* fine debug */
 
 /* regole di debug */
-main{
-  background-color: rgb(0, 26, 255);
+main section{
   min-height: 100px;
+  background-color: lightgray;
 }
-/* fine debug */
+
+.carosel{
+  height: 500px;
+  text-align: center;
+  border: 3px solid;
+}
+.barra{
+  background-color: purple;
+  min-height: 50px;
+}
+.row{
+  display: flex;
+  width: 100%;
+}
+.row .col.four{
+  width: 25%;
+  /* regole di debug */
+  background-color: lightgreen;
+  border: 1px solid #ffffff;
+  min-height: 100px;
+  /* fine debug */
+}
+.row .col.three{
+  width: calc(100% / 3);
+  /* regole di debug */
+  background-color: lightgreen;
+  border: 1px solid white;
+  min-height: 100px;
+  /* fine debug */
+}
+.row .col.two{
+  width: 50%;
+  /* regole di debug */
+  background-color: lightgreen;
+  border: 1px solid white;
+  min-height: 100px;
+  /* fine debug */
+}
 
 /* regole di debug */
 footer{
