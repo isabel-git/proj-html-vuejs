@@ -1,4 +1,4 @@
-/* regole generali */
+/* REGOLE GENERALI */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -18,13 +18,57 @@ min-height: 100px;
   display: flex;
   flex-wrap: wrap;
 }
-/* regole di debug */
-  header{
-    background-color: red;
-    min-height: 100px;
-  }
-/* fine debug */
+/* list */
+ul{
+  list-style: none;
+}
+/* link */
+a{
+  text-decoration: none;
+  color: black;
+}
 
+/******* INIZIO REGOLE HEADER *******/
+header{
+  background-color: white;
+  margin-bottom: 100px;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  /* regole di debug */
+  height: 100px;
+  /* fine debug */
+  }
+  header .flex{
+    justify-content: space-between;
+  }
+  header nav{
+    height: 100%;
+    text-align: center;
+  }
+  header .logo img,
+  header .logo{
+    height: 100%;
+  }
+  header li{
+    height: 100%; width: 100px;
+    display: inline-block;
+    padding: 10px;
+  }
+  header .icon{
+    margin: 7px 0;
+  }
+  .active{
+    background-color: orange;
+  }
+  .active a{
+    color: white;
+  }
+/******* FINE HEADER *******/
+
+/******* INIZIO REGOLE MAIN *******/
 /* regole di debug */
 main section{
   min-height: 100px;
@@ -32,14 +76,14 @@ main section{
 }
 /* fine debug */
 
-/* carosel a - b e c */
+/**** carosel a - b e c ****/
 .carosel{
   height: 500px;
   text-align: center;
   border: 3px solid;
 }
 
-/* barra a e b*/
+/**** barra a e b ****/
 .barra{
   background-color: purple;
 }
@@ -56,7 +100,7 @@ main section{
   min-height: 100px;
   /* fine debug */
 }
-/* info a e b */
+/**** info a e b ****/
 .info-a .box,
 .info-b .box {
   width: 50%;
@@ -83,7 +127,7 @@ main section{
   /* fine debug */
 }
 
-/* sectiom child images */
+/**** section child images ****/
 .child-images{
   width: 100%;
 }
@@ -95,7 +139,7 @@ main section{
   width: calc(100% / 3);
 }
 
-/* contact us */
+/**** contact us ****/
 .contact .box{
   width: 25%;
 }
@@ -114,11 +158,99 @@ textarea{
 .form-left input{
   height: 50px;
 }
+/******* FINE MAIN *******/
 
-
+/******* INIZIO REGOLE FOOTER *******/
 /* regole di debug */
 footer{
-  background-color: rgb(255, 217, 0);
   min-height: 100px;
 }
 /* fine debug */
+/**** top ****/
+footer .top{
+  background-image: url(../images/pattern.png);
+  background-repeat: no-repeat;
+  color: lightgray
+}
+footer .box{
+  width: 25%;
+  padding: 10px;
+}
+footer .title{
+  margin-bottom: 20px;
+  color: white;
+}
+footer .line{
+  width: 40px; height: 1px;
+  background-color: lightgray;
+  margin-top: 5px;
+}
+footer .top a{
+  color: lightgray;
+}
+
+/* about */
+.about p,
+.features p{
+  margin-bottom: 20px;
+}
+footer .about img{
+  width: 100px;
+}
+
+/* archives */
+.archives li,
+.features li{
+  margin-bottom: 10px;
+}
+footer .archives li{
+  border: 1px solid;
+  padding: 5px;
+}
+footer .archives li:hover{
+  border: 1px solid white;
+
+}
+footer .archives a{
+  display: block;
+  width: 100%;
+}
+
+/* features */
+footer .features img{
+  margin-right: 2px;
+}
+
+/* posts */
+.posts .flex{
+  width: 100%;
+}
+.posts .posts-image{
+  width: 40px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+.posts p:hover{
+  color: white;
+  text-decoration: underline white;
+}
+
+/**** bottom ****/
+/* social */
+footer .bottom{
+  text-align: center;
+}
+.social a{
+  padding: 1px;
+}
+.social img{
+  border: 1px solid orange;
+  background-color: orange;
+  margin: 10px 0;
+}
+.copyright{
+  font-size: 11px;
+  color: gray;
+}
+
+/******* FINE FOOTER *******/

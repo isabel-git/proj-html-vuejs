@@ -16,16 +16,27 @@
 <body>
 
     <!-------- INIZIO HEADER -------->
-    <header>
-        <div id="app-header">
+    <header id="app-header">
 
-            <!-- logo e barra di navigazione -->
-            <nav class=" container flex">
+        <!-- logo e barra di navigazione -->
+        <nav class="container flex">
+            <a href="#" class="logo">
+                <img :src="logo" alt="">
+            </a>
 
-            </nav>
+            <ul>
+                <li v-for="(link, index) in headerLinks" :class="(index === 0 ? 'active' : '')">
+                    <a href="#">
+                        <div class="icon">
+                            <img v-if="index === 0" :src="link.imgB">
+                            <img v-else :src="link.imgA">
+                        </div>
+                        <p>{{ link.text }}</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
-
-        </div>
     </header>
     <!-------- FINE -------->
 
@@ -301,37 +312,39 @@
                 <p>loremloremlorem</p>
             </div>
 
-            
-                <div class="flex">
-                    <div class="postal box">
-                        Postal Adress
-                    </div>
 
-                    <div class="phone box">
-                        Phone & E-mail
-                    </div>
-
-                    <div class="business box">
-                        Business-Hours
-                    </div>
-
-                    <div class="sessions box">
-                        Sessions
-                    </div>
+            <div class="flex">
+                <div class="postal box">
+                    Postal Adress
                 </div>
 
-                <div class="form flex">
-                    <div class="form-left flex">
-                        <div><input type="text" placeholder="Your Name*"></div>
-                        <div><input type="email" placeholder="Your Email*"></div>
-                        <div><input type="text" placeholder="Subject"></div>
-                    </div>
-
-                    <div class="form-right">
-                        <textarea cols="30" rows="10" placeholder="Your Message*"></textarea>
-                    </div>
-
+                <div class="phone box">
+                    Phone & E-mail
                 </div>
+
+                <div class="business box">
+                    Business-Hours
+                </div>
+
+                <div class="sessions box">
+                    Sessions
+                </div>
+            </div>
+
+            <div class="form flex">
+                <div class="form-left flex">
+                    <div><input type="text" placeholder="Your Name*"></div>
+                    <div><input type="email" placeholder="Your Email*"></div>
+                    <div><input type="text" placeholder="Subject"></div>
+                </div>
+
+                <div class="form-right">
+                    <textarea cols="30" rows="10" placeholder="Your Message*"></textarea>
+                </div>
+
+            </div>
+
+            <a href="#">lorem</a>
             </div>
 
 
@@ -341,35 +354,102 @@
 
 
     <!-------- INIZIO FOOTER -------->
-    <footer>
-        <div id="app-footer">
+    <footer id="app-footer">
 
-            <div class="top container">
-                <!-- parte sopra del footer -->
-                <div class="row">
-                    <div class="col four">
+        <!-- parte sopra del footer -->
+        <div class="top container">
+            <div class="flex">
 
+                <!-- about us -->
+                <div class="about box">
+                    <div class="title">
+                        <h4>About Us</h4>
+                        <div class="line"></div>
                     </div>
 
-                    <div class="col four">
+                    <p>Elipsis magna a nulla elite forte maecenas est elementum magna etos interdum movum morbi
+                        vehicula morbi.</p>
+                    <a href=""><img :src="logo" alt=""></a>
+                </div>
 
+                <!-- archives -->
+                <div class="archives box">
+                    <div class="title">
+                        <h4>Archives</h4>
+                        <div class="line"></div>
                     </div>
 
-                    <div class="col four">
+                    <ul>
+                        <li v-for="link in archivesLinks"><a href="#">{{ link }}</a></li>
+                    </ul>
+                </div>
 
+                <!-- our features -->
+                <div class="features box">
+                    <div class="title">
+                        <h4>Our Features</h4>
+                        <div class="line"></div>
                     </div>
 
-                    <div class="col four">
+                    <p>Nunc gravida rutrum mauris vehin hasellus ac pretium augue vivamul lacus ligul mattis ac vene: </p>
+                    <ul>
+                        <li>
+                            <img src="images/style_4_alt.png"><span>Friendly and welcoming place</span>
+                        </li>
 
+                        <li>
+                            <img src="images/style_4_alt.png"><span>Science and art classes</span>
+                        </li>
+
+                        <li>
+                            <img src="images/style_4_alt.png"><span>Positive learning environment</span>
+                        </li>
+
+                        <li>
+                            <img src="images/style_4_alt.png"><span>Educational field trips</span>
+                        </li>
+
+                        <li>
+                            <img src="images/style_4_alt.png"><span>Writing and reading classes</span>
+                        </li>
+
+                        <li>
+                            <img src="images/style_4_alt.png"><span>Science and art classes</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- recent posts -->
+                <div class="posts box">
+                    <div class="title">
+                        <h4>Recent posts</h4>
+                        <div class="line"></div>
                     </div>
+
+                    <ul>
+                        <li class="flex" v-for="link in postLinks">
+                            <a href="#"><img class="posts-image" :src="link.img" alt=""></a>
+
+                            <div>
+                                <a href="#" class="posts-text"><p>{{ link.text }}</p></a>
+                                <img :src="postIcon" alt="">
+                                <span>{{ link.date }}</span>   
+                            </div>
+
+                        </li>
+                    </ul>
                 </div>
             </div>
-
-            <div class="bottom container">
-                <!-- parte sotto del footer -->
-            </div>
-
         </div>
+
+        <!-- parte sotto del footer -->
+        <div class="bottom container">
+            <div class="social">
+                <a href="#" v-for="social in socialLinks"><img :src="social" alt=""></a>
+            </div>
+            <div class="copyright">© Fable - Children Kindergarten WordPress Theme by QuanticaLabs</div>
+        </div>
+
     </footer>
     <!-------- FINE -------->
 
