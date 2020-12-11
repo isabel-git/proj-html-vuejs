@@ -45,7 +45,7 @@
     <main>
 
         <!-- carosel-A -->
-        <section class="carosel">
+        <section class="carosel a">
             <img src="images/" alt="">
 
         </section>
@@ -53,8 +53,12 @@
         <!-- barra-A -->
         <section class="barra">
             <div class="container flex">
-                <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit?</h1>
-                <a href="#" class="button">lorem</a>
+                <p class="font-big">How to Enroll Your Child to a Class?</p>
+
+                <a href="#" class="button">
+                    <span>Learn More</span>
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </a>
             </div>
         </section>
 
@@ -112,42 +116,63 @@
         </section>
 
         <!-- carosel-B -->
-        <section class="carosel">
+        <section class="carosel b flex">
             <div class="container">
 
-                <div class="circle flex">
+                <div class="flex">
                     <div class="box">
-                        <p>cerchio</p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem dicta cupiditate exercitationem
-                        aut,
-                        distinctio numquam blanditiis, animi quis error ab itaque quisquam ducimus natus consectetur
-                        esse
-                        aliquid adipisci accusamus iusto.
+
+                        <div class="circle">
+                            <span class="absolute font-big">100</span>
+                        </div>
+
+                        <p class="title">Our Pupils</p>
+                        <span class="text font-small">Pulvinar forte maestro node terminal est elipsis prism.</span>
+
                     </div>
 
                     <div class="box">
-                        <p>cerchio</p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quod fugiat accusantium,
-                        ut
-                        rerum facere nemo, sit deleniti vitae voluptate atque natus enim quibusdam recusandae ipsum
-                        temporibus exercitationem nulla labore.
+
+                        <div class="circle">
+                            <span class="absolute font-big">100</span>
+                        </div>
+
+                        <p class="title">Teaching Hours</p>
+                        <span class="text font-small">Elipsis morbi nulla a metro interdum vitae elite.</span>
+
                     </div>
 
                     <div class="box">
-                        <p>cerchio</p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quod fugiat accusantium,
-                        ut
-                        rerum facere nemo, sit deleniti vitae voluptate atque natus enim quibusdam recusandae ipsum
-                        temporibus exercitationem nulla labore.
+
+                        <div class="circle">
+                            <span class="absolute font-big">100</span>
+                        </div>
+
+                        <p class="title">Satisfied Parents</p>
+                        <span class="text font-small">Elementum pulvinar detos diaspis movum blandit.</span>
+
                     </div>
 
                     <div class="box">
-                        <p>cerchio</p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quod fugiat accusantium,
-                        ut
-                        rerum facere nemo, sit deleniti vitae voluptate atque natus enim quibusdam recusandae ipsum
-                        temporibus exercitationem nulla labore.
+
+                        <div class="circle">
+                            <span class="absolute font-big">100</span>
+                        </div>
+
+                        <p class="title">Meals Per Year</p>
+                        <span class="text font-small">Pulvinar forte maestro node terminal est elipsis prism.</span>
+
                     </div>
+
+                </div>
+                
+                <div>
+                    <div class="squere active"></div>
+                    <div class="squere"></div>
+                    <div class="squere"></div>
+                    <div class="squere"></div>
+                    <div class="squere"></div>
+                    <div class="squere"></div>
                 </div>
             </div>
         </section>
@@ -224,8 +249,12 @@
         <!-- barra-B -->
         <section class="barra">
             <div class="container flex">
-                <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit?</h1>
-                <a href="#">lorem</a>
+                <p class="font-big">Lorem ipsum dolor, sit amet consectetur adipisicing elit?</p>
+
+                <a href="#" class="button">
+                    <span>Learn More</span>
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </a>
             </div>
         </section>
 
@@ -269,11 +298,28 @@
         </section>
 
         <!-- carosel-C -->
-        <section class="carosel">
+        <section class="carosel c flex">
             <div class="container">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae numquam, sit soluta natus in autem
-                exercitationem mollitia at commodi dolores iste ratione qui deserunt impedit quos, ullam dolorum facilis
-                possimus?
+
+                <div class="circle">
+                    <img class="absolute" src="images/quote_alt.png" alt="">
+                </div>
+
+                <p class="font-big">Fable Kindergarten is a great place for my daughter to start her schooling
+                    experience. It’s welcoming and safe and my daughter loves being there.</p>
+
+                <div class="line"></div>
+
+                <p class="cit">Joe R. Hamblen</p>
+
+                <div>
+                    <div class="squere"></div>
+                    <div class="squere"></div>
+                    <div class="squere"></div>
+                    <div class="squere active"></div>
+                    <div class="squere"></div>
+                    <div class="squere"></div>
+                </div>
             </div>
         </section>
 
@@ -391,7 +437,8 @@
                         <div class="line"></div>
                     </div>
 
-                    <p>Nunc gravida rutrum mauris vehin hasellus ac pretium augue vivamul lacus ligul mattis ac vene: </p>
+                    <p>Nunc gravida rutrum mauris vehin hasellus ac pretium augue vivamul lacus ligul mattis ac vene:
+                    </p>
                     <ul>
                         <li>
                             <img src="images/style_4_alt.png"><span>Friendly and welcoming place</span>
@@ -431,9 +478,11 @@
                             <a href="#"><img class="posts-image" :src="link.img" alt=""></a>
 
                             <div>
-                                <a href="#" class="posts-text"><p>{{ link.text }}</p></a>
+                                <a href="#" class="posts-text">
+                                    <p>{{ link.text }}</p>
+                                </a>
                                 <img :src="postIcon" alt="">
-                                <span>{{ link.date }}</span>   
+                                <span>{{ link.date }}</span>
                             </div>
 
                         </li>
@@ -447,7 +496,7 @@
             <div class="social">
                 <a href="#" v-for="social in socialLinks"><img :src="social" alt=""></a>
             </div>
-            <div class="copyright">© Fable - Children Kindergarten WordPress Theme by QuanticaLabs</div>
+            <div class="copyright font-small">© Fable - Children Kindergarten WordPress Theme by QuanticaLabs</div>
         </div>
 
     </footer>
