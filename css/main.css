@@ -296,11 +296,14 @@ main .circle{
 }
 
 /**** section child images ****/
-.child-images{
+.child-images.flex{
   width: 100%;
 }
 .child-images .img{
   width: 25%;
+}
+.child-images img{
+  width: 100%;
 }
 
 
