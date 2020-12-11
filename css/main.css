@@ -228,13 +228,15 @@ main .circle{
   border: 1px solid;
   margin-top: 30px;
 }
+.news .image .box.sx,
 .staff .image .box.sx,
 .our-class .image .box.sx{
-  margin-right: 15px; /* +15 */
+  margin-left: 15px; /* +15 */
 }
+.news .image .box.dx,
 .staff .image .box.dx,
 .our-class .image .box.dx{
-  margin-left: 15px; /* +15 */
+  margin-right: 15px; /* +15 */
 }
 .staff .image img,
 .our-class .image img{
@@ -282,6 +284,17 @@ main .circle{
   margin: 10px 0;
 }
 
+/* news */
+.news .image .box{
+  width: calc(100% / 3 - 20px);
+}
+.news .image img{
+  width: 100%;
+}
+.news .line{
+  width: 100%;
+}
+
 /**** section child images ****/
 .child-images{
   width: 100%;
@@ -290,13 +303,18 @@ main .circle{
   width: 25%;
 }
 
-.news .images .box{
-  width: calc(100% / 3);
-}
 
 /**** contact us ****/
+.contact .info.flex{
+  text-align: center;
+  margin-bottom: 30px;
+}
 .contact .box{
   width: 25%;
+}
+.contact .box h1{
+  color: blueviolet;
+  margin-bottom: 20px;
 }
 .form-left,
 .form-right{
