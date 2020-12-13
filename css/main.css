@@ -89,8 +89,9 @@ header{
 
 /******* INIZIO REGOLE MAIN *******/
 /* regole di debug */
-main{
-  margin-top: 100px;
+main,
+footer{
+  background-color: rgb(240, 240, 240);
 }
 /* fine debug */
 section.welcome,
@@ -111,13 +112,13 @@ main .title{
   margin-top: 10px;
   margin-bottom: 20px;
 }
-/**** carosel a - b e c ****/
-.carosel{
+/**** carousel a - b e c ****/
+.carousel{
   height: 500px;
   text-align: center;
 }
-.carosel.b,
-.carosel.c {
+.carousel.b,
+.carousel.c {
   color: white;
   width: 100%;
   align-items: center;
@@ -131,16 +132,16 @@ main .circle{
   padding: 80px;
   position: relative;
 }
-.carosel.a .squere,
-.carosel.b .squere,
-.carosel.c .squere {
+.carousel.a .squere,
+.carousel.b .squere,
+.carousel.c .squere {
   display: inline-block;
   width: 20px; height: 10px;
   border: 1px solid;
 }
 
-/* carosel a */
-.carosel.a{
+/* carousel a */
+.carousel.a{
   background-image: url(../images/slider_slide3_background.png);
 }
 
@@ -195,23 +196,50 @@ main .circle{
 .info-a .box,
 .info-b .box {
   width: 50%;
-  /* regole di debug */
-  background-color: lightgreen;
-  border: 1px solid white;
-  min-height: 200px;
-  /* fine debug */
 }
 
-/* carosel b */
-.carosel.b{
+/* info a */
+.gallery.box .active{
+  width: 100%;
+  vertical-align: bottom;
+  margin-bottom: 12px;
+}
+.gallery.box .flex{
+  width: calc(100%);
+}
+.gallery.box .img-dot img{
+  width: calc(100% / 3 - 8px);
+}
+.gallery.box .img-dot img.sx{
+  margin-left: 12px;
+}
+.gallery.box .img-dot img.dx{
+  margin-right: 12px;
+}
+.info-a .box-circle{
+  width: 100%;
+  margin: 20px 0;
+}
+.info-a .circle{
+  padding: 40px;
+  border: 0;
+  background-color: orangered;
+  margin-right: 30px;
+}
+.info-a .box-circle p{
+  width: 70%;
+}
+
+/* carousel b */
+.carousel.b{
   background-image: url(../images/parallax_01.jpg);
 }
 .welcome .flex,
-.carosel.b .flex{
+.carousel.b .flex{
   justify-content: space-around;
 }
 .welcome .box,
-.carosel.b .box{
+.carousel.b .box{
   width: 200px;
 }
 
@@ -250,6 +278,22 @@ main .circle{
   width: 50%;
 }
 
+/* info b */
+.info-b p{
+  margin: 30px 0;
+}
+.info-b .box.flex{
+  text-align: center;
+  width: 50%;
+}
+.info-b .flex .circle-box {
+  width: 50%;
+}
+.info-b .circle{
+  padding: 40px;
+  border: 0;
+  background-color: white;
+}
 
 /**** class e staff ****/
 .our-class .text-right,
@@ -269,18 +313,18 @@ main .circle{
   /* fine debug */
 }
 
-/* carosel c */
-.carosel.c{
+/* carousel c */
+.carousel.c{
   background-image: url(../images/parallax_02.jpg);
 }
-.carosel.c .circle{
+.carousel.c .circle{
   padding: 30px;
 }
-.carosel.c .line{
+.carousel.c .line{
   display: inline-block;
   margin-bottom: 5px;
 }
-.carosel.c .cit{
+.carousel.c .cit{
   margin: 10px 0;
 }
 
@@ -304,8 +348,22 @@ main .circle{
 }
 .child-images img{
   width: 100%;
+  vertical-align:bottom
 }
 
+/**** mappa ****/
+.map.flex{
+  width: 100%;
+  position: relative;
+}
+.map div{
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+}
+.map img{
+  width: calc(100% / 5);
+}
 
 /**** contact us ****/
 .contact .info.flex{
