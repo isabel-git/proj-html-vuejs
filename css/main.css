@@ -8,7 +8,7 @@
 .container{
   width: 1000px;
   margin: 0 auto;
-  /* regole di debug */
+  /* regole di debug 
 border: 1px solid rgb(0, 81, 255);
 min-height: 100px;
   /* fine debug */
@@ -42,9 +42,6 @@ a{
 }
 .font-small{
   font-size: 11px;
-}
-.gray{
-  color: gray;
 }
 
 
@@ -88,19 +85,24 @@ header{
 /******* FINE HEADER *******/
 
 /******* INIZIO REGOLE MAIN *******/
-/* regole di debug */
 main,
 footer{
   background-color: rgb(240, 240, 240);
+  color: gray;
 }
-/* fine debug */
+/* padding */
 section.welcome,
+section.info-a,
 section.our-class,
+section.info-b,
 section.staff,
 section.news,
-section.contact{
-  padding: 80px 0;
+section.contact,
+footer .top{
+  padding: 50px 0;
 }
+
+/* title */
 main .title-box{
   margin-bottom: 50px;
   text-align: center;
@@ -108,10 +110,41 @@ main .title-box{
 main .title{
   color: blueviolet;
 }
-.title-box .gray{
-  margin-top: 10px;
-  margin-bottom: 20px;
+
+.welcome .title-box p,
+.our-class .title-box p,
+.staff .title-box p,
+.news .title-box p,
+.contact .title-box p{
+  margin: 20px 0;
 }
+.staff .button-link,
+.info-a .button-link,
+.contact .button-link{
+  background-color: orangered;
+  color: white;
+  padding: 10px;
+  display: inline-block;
+}
+.staff .image .box,
+.our-class .image .box{
+  display: flex;
+  justify-content: space-between;
+  width: calc(50% - 15px); /*-15px*/
+  min-height: 100px;
+  margin-top: 30px;
+}
+.news .image .box.sx,
+.staff .image .box.sx,
+.our-class .image .box.sx{
+  margin-left: 15px; /* +15 */
+}
+.news .image .box.dx,
+.staff .image .box.dx,
+.our-class .image .box.dx{
+  margin-right: 15px; /* +15 */
+}
+
 /**** carousel a - b e c ****/
 .carousel{
   height: 500px;
@@ -149,6 +182,9 @@ main .circle{
 .barra{
   background-image: url(../images/pattern.png);
 }
+.barra .container{
+  min-height: 100px;
+}
 .barra,
 .barra a{
   color: white;
@@ -172,7 +208,7 @@ main .circle{
 }
 
 
-/* welcome */
+/**** welcome ****/
 .welcome{
   text-align: center;
 }
@@ -216,6 +252,10 @@ main .circle{
 .gallery.box .img-dot img.dx{
   margin-right: 12px;
 }
+.info-a .title,
+.info-a .button{
+  margin: 20px 0;
+}
 .info-a .box-circle{
   width: 100%;
   margin: 20px 0;
@@ -246,39 +286,33 @@ main .circle{
 /* our-class */
 .our-class .image.flex{
   width: 100%;
+  color: white;
 }
-.staff .image .box,
-.our-class .image .box{
-  display: flex;
-  justify-content: space-between;
-  width: calc(50% - 15px); /*-15px*/
-  min-height: 100px;
-  border: 1px solid;
-  margin-top: 30px;
+.staff .text-right,
+.our-class .text-right{
+  padding-left: 20px;
 }
-.news .image .box.sx,
-.staff .image .box.sx,
-.our-class .image .box.sx{
-  margin-left: 15px; /* +15 */
-}
-.news .image .box.dx,
-.staff .image .box.dx,
-.our-class .image .box.dx{
-  margin-right: 15px; /* +15 */
-}
-.staff .image img,
-.our-class .image img{
+.our-class .image-box,
+.our-class .text-box{
   width: 50%;
 }
-.our-class .image div{
+.our-class .text-box.flex{
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.our-class .image img{
+  width: 100%;
+  display: block;
+}
+.our-class .box{
   background-color: blueviolet;
 }
-.staff .image div,
-.our-class .image div{
-  width: 50%;
+.our-class .text-bottom span{
+  margin: 0 10px;
 }
 
-/* info b */
+/**** info b ****/
 .info-b p{
   margin: 30px 0;
 }
@@ -301,19 +335,19 @@ main .circle{
 .staff .text-right,
 .staff .text-left{
   width: 50%;
-  /* regole di debug */
+  /* regole di debug 
   border: 1px solid;
   /* fine debug */
 }
 .our-class .images .box,
 .staff .images .box{
   width: 50%;
-  /* regole di debug */
+  /* regole di debug 
   border: 1px solid;
   /* fine debug */
 }
 
-/* carousel c */
+/**** carousel c ****/
 .carousel.c{
   background-image: url(../images/parallax_02.jpg);
 }
@@ -328,15 +362,30 @@ main .circle{
   margin: 10px 0;
 }
 
-/* news */
+/**** news ****/
 .news .image .box{
   width: calc(100% / 3 - 20px);
+}
+.news .image .date,
+.news .image h1{
+  margin-bottom: 20px;
 }
 .news .image img{
   width: 100%;
 }
 .news .line{
   width: 100%;
+  margin: 20px 0;
+}
+.news .box-icon span{
+  margin-right: 10px;
+}
+.news .box-icon img{
+  width: 15px;
+  margin-right: 5px;
+}
+.news a{
+  color: gray;
 }
 
 /**** section child images ****/
@@ -349,6 +398,34 @@ main .circle{
 .child-images img{
   width: 100%;
   vertical-align:bottom
+}
+
+/**** staff ****/
+.staff .image-box{
+  text-align: center;
+  width: 50%;
+}
+.staff .text-box{
+  width: 50%;
+  padding: 10px;
+  padding-top: 30%;
+}
+.staff .image-box h2{
+  margin: 10px 0;
+}
+.staff .image-box span{
+  margin-bottom: 30px;
+}
+.staff .text-box p{
+  margin-bottom: 10px;
+}
+.staff .image-box img{
+  width: 100%;
+}
+.staff .button a{
+  position: relative;
+  font-size: 25px;
+  padding: 15px;
 }
 
 /**** mappa ****/
@@ -374,12 +451,12 @@ main .circle{
   width: 25%;
 }
 .contact .box h1{
-  color: blueviolet;
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 .form-left,
 .form-right{
   width: 50%; height: 200px;
+  margin: 30px 0;
 }
 input,
 textarea{
@@ -392,14 +469,16 @@ textarea{
 .form-left input{
   height: 50px;
 }
+.contact .button{
+  text-align: center;
+}
+.contact .button-link:hover{
+  background-color: blueviolet;
+}
 /******* FINE MAIN *******/
 
 /******* INIZIO REGOLE FOOTER *******/
-/* regole di debug */
-footer{
-  min-height: 100px;
-}
-/* fine debug */
+
 /**** top ****/
 footer .top{
   background-image: url(../images/pattern.png);
